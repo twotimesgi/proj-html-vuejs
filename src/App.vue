@@ -1,19 +1,25 @@
 <template>
 <div id="app">
   <header-comp />
-  <hero-comp />
+  <main>
+    <hero-comp />
+    <about-comp />
+  </main>
 </div>
 </template>
 
 <script>
 import HeaderComp from './components/HeaderComp.vue'
 import HeroComp from './components/HeroComp.vue'
+import AboutComp from './components/AboutComp.vue'
+
 
 export default {
   name: 'App',
   components: {
     HeaderComp,
-    HeroComp
+    HeroComp,
+    AboutComp
   }
 }
 </script>
