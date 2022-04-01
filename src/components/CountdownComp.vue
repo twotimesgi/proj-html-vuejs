@@ -25,7 +25,7 @@ export default {
   name: "CountdownComp",
   data() {
     return {
-      expirationDate: "2022-04-1T19:04:50",
+      expirationDate: "2022-04-19T19:04:50",
       toExpiration: {
         days: 0,
         hours: 0,
