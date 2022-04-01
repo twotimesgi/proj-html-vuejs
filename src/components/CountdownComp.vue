@@ -17,7 +17,7 @@
         <div class="label">Seconds</div>
       </div>
     </div>
-    <div v-else>Expired!</div>
+    <div class="expired" v-else>Expired!</div>
 </template>
 
 <script>
@@ -25,7 +25,7 @@ export default {
   name: "CountdownComp",
   data() {
     return {
-      expirationDate: "2022-04-20T19:04:50",
+      expirationDate: "2022-04-1T19:04:50",
       toExpiration: {
         days: 0,
         hours: 0,
@@ -65,7 +65,7 @@ export default {
     countdownStart() {
       let countdownInterval = setInterval(() => {
         this.toExpiration.seconds--;
-        
+
         if (this.toExpiration.seconds == 0 && this.toExpiration.minutes != 0) {
           this.toExpiration.seconds = 60;
           this.toExpiration.minutes--;
@@ -102,11 +102,19 @@ $numberColor: rgb(255,255,255);
 $labelColor: rgb(0,0,0);
 $numberSize: 4rem;
 $labelSize: 1.2rem;
+
+.expired{
+  font-size: 4rem;
+  text-align: center;
+}
+
 .countdown{
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
 }
 
 .tile{

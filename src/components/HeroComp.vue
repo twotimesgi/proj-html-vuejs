@@ -6,7 +6,8 @@
         <div class="subTitle"><h2>A wonderful serenity has taken possession of my entire soul like these sweet mornings of spring which I enjoy with my whole heart.</h2></div>
       </div>
       <div class="cta-box">
-        <countdown-comp />
+        <div class="left"></div>
+        <countdown-comp class="right"/>
       </div>
     </div>
   </section>
@@ -78,5 +79,13 @@ section{
   left: 50%;
   transform: translateX(-50%);
   border-radius: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.left, .right{
+  width: 50%;
 }
 </style>
