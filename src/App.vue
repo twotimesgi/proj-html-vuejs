@@ -16,6 +16,8 @@ export default {
 </script>
 
 <style lang="scss">
+$accentColor: #f2b71d;
+
 @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;600;700&display=swap');
 
 body{
