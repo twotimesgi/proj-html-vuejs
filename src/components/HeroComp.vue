@@ -1,10 +1,25 @@
 <template>
-<div></div>
+  <section>
+    <div class="container">
+      <div class="text-box">
+        <div class="title"><h1>Start your Human <span class="hl">Revolution</span> today</h1></div>
+        <div class="subTitle"><h2>A wonderful serenity has taken possession of my entire soul like these sweet mornings of spring which I enjoy with my whole heart.</h2></div>
+      </div>
+      <div class="cta-box">
+        <countdown-comp />
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
+import CountdownComp from "./CountdownComp.vue";
+
 export default {
   name: "HeroComp",
+  components:{
+    CountdownComp
+  }
 };
 </script>
 
@@ -12,96 +27,56 @@ export default {
 <style scoped lang="scss">
 $headerBackground: rgb(255, 255, 255);
 $textColor: #252525;
-$textSize: 1.2rem;
-$iconSize: 1.2rem;
+$accentColor: #f2b71d;
+$titleSize: 3.5rem;
+$subtitleSize: 1.2rem;
 
-header {
-  color: $textColor;
+section{
   width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  border-bottom: 1px solid rgb(182, 182, 182);
+  background-image: url("../assets/hero.jpg");
+  background-repeat: no-repeat;
+  height:  70vh;
+  background-size: cover;
+  position: relative;
+}
 
-  .header-container {
-    width: 65%;
-    background-color: $headerBackground;
-    margin: 0 auto;
-    padding: 40px 0;
-    display: flex;
-    justify-content: space-between;
-  }
+.container{
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+}
 
-  .left,
-  .right {
-    align-items: center;
-    display: flex;
-  }
+.text-box{
+  width: 50%;
+  height: 300px;
 
-  li {
-    display: inline;
-    margin: 0 10px;
-    font-size: $textSize;
-    font-weight: 800;
-    position: relative;
-
-    &.new::after {
-      content: "NEW";
-      width: 25px;
-      height: 10px;
-      padding: 2px;
-      top: -15px;
-      right: -10px;
-      font-size: 0.6rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      background-color: rgb(204, 0, 0);
-      color: white;
-      border-top-left-radius: 0.2rem;
-      border-top-right-radius: 0.2rem;
-      border-bottom-right-radius: 0.2rem;
-      font-weight: 500;
-    }
-
-    &.active::after {
-      content: "";
-      width: 90%;
-      height: 4px;
-      background-color: $accentColor;
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    &.active::before {
-      content: "";
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 0 2.5px 4.3px 2.5px;
-      border-color: transparent transparent $accentColor transparent;
-      position: absolute;
-      bottom: -7px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
-
-  a {
+  h1{
+    margin-bottom: 1.5rem;
     color: $textColor;
-    text-decoration: none;
+    font-size: $titleSize;
+    font-family: 'Bitter', serif;
   }
 
-  .social-icons{
-    margin-left: 50px;
-    font-size: $iconSize;
-    display: flex;
-    gap: 15px;
+  h2{
+    font-weight: 300;
+    font-size: $subtitleSize;
   }
 
+  .hl{
+    color: $accentColor;
+  }
+}
+
+.cta-box{
+  background-color: $accentColor;
+  width: 80%;
+  max-width: 65rem;
+  height: 13rem;
+  position: absolute;
+  bottom: -75px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0.7rem;
 }
 </style>

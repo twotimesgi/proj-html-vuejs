@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="header-container">
+    <div class="container">
       <div class="left">
         <img class="logo" src="../assets/logo.svg" />
       </div>
@@ -106,18 +106,14 @@ $accentColor: #f2b71d;
 header {
   color: $textColor;
   width: 100%;
-  position: fixed;
   top: 0;
   left: 0;
+  padding: 50px 0;
   right: 0;
+  background-color: $headerBackground;
   border-bottom: 1px solid rgb(209, 209, 209);
 
-  .header-container {
-    width: 65%;
-    background-color: $headerBackground;
-    margin: 0 auto;
-    padding: 40px 0;
-    display: flex;
+  .container{
     justify-content: space-between;
   }
 
@@ -133,6 +129,7 @@ header {
     font-size: $textSize;
     font-weight: 800;
     position: relative;
+    font-family: 'Bitter', serif;
 
     &.new::after {
       content: "NEW";
