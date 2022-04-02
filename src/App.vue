@@ -4,6 +4,7 @@
   <main>
     <hero-comp />
     <about-comp />
+    <courses-comp />
   </main>
 </div>
 </template>
@@ -12,6 +13,8 @@
 import HeaderComp from './components/HeaderComp.vue'
 import HeroComp from './components/HeroComp.vue'
 import AboutComp from './components/AboutComp.vue'
+import CoursesComp from './components/CoursesComp.vue'
+
 
 
 export default {
@@ -19,7 +22,8 @@ export default {
   components: {
     HeaderComp,
     HeroComp,
-    AboutComp
+    AboutComp,
+    CoursesComp
   }
 }
 </script>

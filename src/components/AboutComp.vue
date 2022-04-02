@@ -26,16 +26,16 @@ $numberSize: 5rem;
 $textSize: 0.9rem;
 
 .left, .right{
-  width: 60%;
-  padding: 150px 100px;
+  width: 65%;
+  padding: 150px 50px;
   display: flex;
   flex-direction: column;
-  align-items: center
-;}
+  align-items: center;
+  }
 
-.left{
-  width: 40%;
-}
+  .left{
+    width: 35%;
+  }
 
 h3{
   font-family: "Bitter", serif;
