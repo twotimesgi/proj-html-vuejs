@@ -5,6 +5,7 @@
     <hero-comp />
     <about-comp />
     <courses-comp />
+    <get-book-comp />
   </main>
 </div>
 </template>
@@ -14,6 +15,7 @@ import HeaderComp from './components/HeaderComp.vue'
 import HeroComp from './components/HeroComp.vue'
 import AboutComp from './components/AboutComp.vue'
 import CoursesComp from './components/CoursesComp.vue'
+import GetBookComp from './components/GetBookComp.vue'
 
 
 
@@ -23,7 +25,8 @@ export default {
     HeaderComp,
     HeroComp,
     AboutComp,
-    CoursesComp
+    CoursesComp,
+    GetBookComp
   }
 }
 </script>

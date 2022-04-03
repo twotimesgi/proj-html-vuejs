@@ -2,7 +2,8 @@
   <section class="courses">
     <div class="container">
       <h2>New Courses</h2>
-      <div v-for="item in coursesList" :key="item.title" class="card">
+      <div class="courses-container">
+      <div v-for="item in coursesList.slice(0,nOfCoursesShowed)" :key="item.title" class="card">
         <div :class="item.isSpecial ? 'special':''" class="img-box">
           <img :src="item.imgUrl">
         </div>
@@ -10,10 +11,12 @@
         <div class="category">{{ item.category }}</div>
         <div class="info-container">
           <div class="item"><font-awesome-icon  class="icon" :icon="['fas', 'signal']" />{{ item.difficulty }}</div>
-          <div  class="item"><font-awesome-icon  class="icon" :icon="['fas', 'list']" />{{ item.lectures }} Lectures</div>
-          <div  class="item"><font-awesome-icon class="icon" :icon="['far', 'clock']" />{{ item.hours }} hours</div>
+          <div class="item"><font-awesome-icon  class="icon" :icon="['fas', 'list']" />{{ item.lectures }} Lectures</div>
+          <div class="item"><font-awesome-icon class="icon" :icon="['far', 'clock']" />{{ item.hours }} hours</div>
         </div>
       </div>
+      </div>
+      <button v-if="nOfCoursesShowed < coursesList.length" @click="nOfCoursesShowed+=3">LOAD MORE</button>
     </div>
   </section>
 </template>
@@ -24,6 +27,7 @@ export default {
   name: "CoursesComp",
   data(){
     return {
+      nOfCoursesShowed: 3,
       coursesList: [
         {
           title: "How to be a DJ? Make Electronic Music",
@@ -78,7 +82,8 @@ export default {
           difficulty: "Beginner",
           lectures: 6,
           hours: 6
-      }]
+      }
+      ]
     }
   }
 };
@@ -99,10 +104,18 @@ $btnBackground: rgb(42, 62, 64);
 
 .container { 
   height: 100%;
-  justify-content: center;
+  display: block;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.courses-container{
   padding: 80px 0;
   flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
   gap: 30px;
+  width: 100%;
 }
 
 h2 {
@@ -110,11 +123,23 @@ h2 {
   font-size: $titleSize;
   font-family: "Bitter", serif;
   width: 100%;
-  text-align: center;
+}
+
+button{
+  background-color: $accentColor;
+  color: white;
+  font-family: "Bitter", serif;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 2rem;
+}
+
+button:hover{
+  filter: brightness(0.8);
 }
 
 .card{
-  width: 350px;
+  width: 300px;
   background-color: rgb(255,255,255);
   border: 1px solid rgb(209, 209, 209);
 
@@ -161,17 +186,18 @@ h2 {
     padding: 20px 0;
     display: flex;
     justify-content: space-around;
-    border-top: 1px solid rgb(209, 209, 209);
-
-    .icon{
-      color: $accentColor;
-    }
+    border-top: 1px solid rgb(230, 230, 230);
 
     .item{
       display: flex;
       gap: 5px;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       opacity: 0.7;
+      color: rgba(0, 0, 0,0.8)
+    }
+
+    .icon{
+      color: $accentColor;
     }
   }
 
