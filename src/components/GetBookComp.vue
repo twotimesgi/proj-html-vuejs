@@ -39,7 +39,7 @@ $textSize: 1.2rem;
 }
 
 .left, .right{
-  width: 40%;
+  width: 50%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -47,8 +47,9 @@ $textSize: 1.2rem;
 }
 
 .right{
-  width: 60%;
+  width: 50%;
   background-image: url("../assets/book.png");
+  background-size: contain;
   height: 100%;
   background-repeat: no-repeat;
 }

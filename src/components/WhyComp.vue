@@ -1,12 +1,11 @@
 <template>
-  <section class="courses">
+  <section class="why">
     <div class="container">
-      <h2>New Courses</h2>
-      <div class="courses-container">
+      <h2>Why My Courses?</h2>
+      <div class="why-container">
       <div v-for="item in coursesList.slice(0,nOfCoursesShowed)" :key="item.title" class="card">
         <div :class="item.isSpecial ? 'special':''" class="img-box">
           <img :src="item.imgUrl">
-          <div class="overlay">{{ item.price }}</div>
         </div>
         <h3 class="title">{{ item.title }}</h3>
         <div class="category">{{ item.category }}</div>
@@ -17,19 +16,16 @@
         </div>
       </div>
       </div>
-      <button v-if="nOfCoursesShowed < coursesList.length" @click="nOfCoursesShowed+=3">LOAD MORE</button>
     </div>
   </section>
 </template>
 
 <script>
-
 export default {
-  name: "CoursesComp",
-  data(){
+  name: "WhyComp",
+  data() {
     return {
-      nOfCoursesShowed: 3,
-      coursesList: [
+      cardsList: [
         {
           title: "How to be a DJ? Make Electronic Music",
           imgUrl: require("../assets/course1.jpeg"),
@@ -38,9 +34,8 @@ export default {
           difficulty: "Advanced",
           lectures: 8,
           hours: 6,
-          price: "$59"
-      },
-      {
+        },
+        {
           title: "Nvidia and UE4 Technologies Practice",
           imgUrl: require("../assets/course2.png"),
           category: "Nvidia",
@@ -48,9 +43,8 @@ export default {
           difficulty: "Advanced",
           lectures: 8,
           hours: 6,
-          price: "$79"
-      },
-      {
+        },
+        {
           title: "Fashion Photography from professional",
           imgUrl: require("../assets/course-3.jpeg"),
           category: "Fashion",
@@ -58,9 +52,8 @@ export default {
           difficulty: "Advanced",
           lectures: 6,
           hours: 6,
-          price: "$29"
-      },
-      {
+        },
+        {
           title: "Design Instruments for Communication",
           imgUrl: require("../assets/course-4.jpeg"),
           category: "Communication",
@@ -68,9 +61,8 @@ export default {
           difficulty: "Intermediate",
           lectures: 6,
           hours: 6,
-          price: "$29"
-      },
-      {
+        },
+        {
           title: "Make your Concept Right and Beautiful",
           imgUrl: require("../assets/course-5.jpg"),
           category: "Art",
@@ -78,9 +70,8 @@ export default {
           difficulty: "Intermediate",
           lectures: 6,
           hours: 6,
-          price: "$79"
-      },
-      {
+        },
+        {
           title: "Road Bike Manual or How to Be a Champion.",
           imgUrl: require("../assets/course-6.jpeg"),
           category: "Bicycling",
@@ -88,35 +79,34 @@ export default {
           difficulty: "Beginner",
           lectures: 6,
           hours: 6,
-          price: "$89"
-      }
-      ]
-    }
-  }
+        },
+      ],
+    };
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-$sectionBackground: rgb(238,242,245);
+$sectionBackground: rgb(238, 242, 245);
 $accentColor: #f2b71d;
 $titleSize: 3rem;
 $btnBackground: rgb(42, 62, 64);
 
-.courses {
+.why {
   width: 100%;
   background-color: $sectionBackground;
   position: relative;
 }
 
-.container { 
+.container {
   height: 100%;
   display: block;
   padding: 100px 0;
   text-align: center;
 }
 
-.courses-container{
+.why-container {
   padding: 80px 0;
   flex-wrap: wrap;
   justify-content: center;
@@ -132,7 +122,7 @@ h2 {
   width: 100%;
 }
 
-button{
+button {
   background-color: $accentColor;
   color: white;
   font-family: "Bitter", serif;
@@ -141,39 +131,21 @@ button{
   border-radius: 2rem;
 }
 
-button:hover{
+button:hover {
   filter: brightness(0.8);
 }
 
-.card{
+.card {
   width: 300px;
-  background-color: rgb(255,255,255);
+  background-color: rgb(255, 255, 255);
   border: 1px solid rgb(209, 209, 209);
 
-  .img-box{
+  .img-box {
     width: 100%;
-    height: 200px;
     position: relative;
   }
 
-  .overlay{
-    display: none;
-    inset: 0;
-    position: absolute;
-    background-color: rgba(0, 0, 0,0.3);
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: 800;
-    font-family: "Bitter", serif;
-  }
-
-  .img-box:hover .overlay{
-    display: flex;
-  }
-
-  .img-box::after{
+  .img-box::after {
     content: "SPECIAL";
     background-color: $accentColor;
     position: absolute;
@@ -189,18 +161,16 @@ button:hover{
     align-items: center;
   }
 
-  img{
-    height: 100%;
+  img {
     width: 100%;
-    object-fit: cover;
   }
 
-  .title{
+  .title {
     text-align: center;
     margin: 25px 15px 10px 15px;
   }
 
-  .category{
+  .category {
     width: 100%;
     text-align: center;
     opacity: 0.5;
@@ -208,26 +178,24 @@ button:hover{
     margin-bottom: 2rem;
   }
 
-  .info-container{
+  .info-container {
     margin: 0 10px;
     padding: 20px 0;
     display: flex;
     justify-content: space-around;
     border-top: 1px solid rgb(230, 230, 230);
 
-    .item{
+    .item {
       display: flex;
       gap: 5px;
       font-size: 0.8rem;
       opacity: 0.7;
-      color: rgba(0, 0, 0,0.8)
+      color: rgba(0, 0, 0, 0.8);
     }
 
-    .icon{
+    .icon {
       color: $accentColor;
     }
   }
-
 }
-
 </style>
