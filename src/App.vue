@@ -10,6 +10,7 @@
     <counters-comp />
     <testimonials-comp />
   </main>
+  <footer-comp />
 </div>
 </template>
 
@@ -22,6 +23,7 @@ import GetBookComp from './components/GetBookComp.vue'
 import WhyComp from './components/WhyComp.vue'
 import CountersComp from './components/CountersComp.vue'
 import TestimonialsComp from './components/TestimonialsComp.vue'
+import FooterComp from './components/FooterComp.vue'
 
 
 
@@ -35,7 +37,8 @@ export default {
     GetBookComp,
     WhyComp,
     CountersComp,
-    TestimonialsComp
+    TestimonialsComp,
+    FooterComp
   }
 }
 </script>
@@ -50,7 +53,7 @@ body{
 }
 
 .container{
-    width: 65%;
+    width: 75%;
     min-width: 1000px;
     margin: 0 auto;
     display: flex;

@@ -41,7 +41,7 @@ export default {
         },
         {
           title: "Great course!",
-          vote: 4,
+          vote: 4.2,
           desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem esse magnam sapiente dolorem ipsa nam, dolor quam. Aut voluptatum reprehenderit quia praesentium cupiditate, beatae quas quaerat velit maxime totam culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem esse magnam sapiente dolorem ipsa nam, dolor quam. Aut voluptatum reprehenderit quia praesentium cupiditate, beatae quas quaerat velit maxime totam culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem esse magnam sapiente dolorem ipsa nam, dolor quam. Aut voluptatum reprehenderit quia praesentium cupiditate, beatae quas quaerat velit maxime totam culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem esse magnam sapiente dolorem ipsa nam, dolor quam. Aut voluptatum reprehenderit quia praesentium cupiditate, beatae quas quaerat velit maxime totam culpa.",
           imgUrl: require("../assets/test-3.jpg")
         },
@@ -125,7 +125,7 @@ h3{
     margin: 20px 0 10px 0;
     font-family: "Bitter", serif; 
     font-size: 1.6rem;
-    font-weight: 600;
+    font-weight: 00;
 }
 
 p{
