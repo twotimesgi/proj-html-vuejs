@@ -81,6 +81,7 @@ $btnBackground: rgb(42, 62, 64);
     transform: translateY(-50%);
     font-size: 2rem;
     opacity: 0.5;
+    cursor: pointer;
   }
   .arrow-left{
     left: 50px;
@@ -93,6 +94,7 @@ $btnBackground: rgb(42, 62, 64);
   width: 75px;
   height: 75px;
   border-radius: 50%;
+  cursor: pointer;
 
   &.selected{
     width: 100px;

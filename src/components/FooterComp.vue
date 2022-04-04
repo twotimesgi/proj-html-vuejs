@@ -129,7 +129,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 $footerBackground: #f2b71d;
-$textColor: #252525;
+$textColor: rgba(0,0,0,0.8);
 $textSize: 1.2rem;
 $iconSize: 1.2rem;
 

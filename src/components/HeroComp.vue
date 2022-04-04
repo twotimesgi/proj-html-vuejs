@@ -132,6 +132,7 @@ $btnBackground: rgb(42, 62, 64);
   }
 
   button {
+    cursor: pointer;
     position: absolute;
     right: 0;
     top: 0;
