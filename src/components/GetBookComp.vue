@@ -49,7 +49,7 @@ $textSize: 1.2rem;
 .right{
   width: 50%;
   background-image: url("../assets/book.png");
-  background-size: contain;
+  background-size: cover;
   height: 100%;
   background-repeat: no-repeat;
 }

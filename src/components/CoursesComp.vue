@@ -117,7 +117,6 @@ $btnBackground: rgb(42, 62, 64);
 }
 
 .courses-container{
-  padding: 80px 0;
   flex-wrap: wrap;
   justify-content: center;
   display: flex;
@@ -138,6 +137,7 @@ button{
   font-family: "Bitter", serif;
   padding: 1rem 1.5rem;
   border: none;
+  margin-top: 2rem;
   border-radius: 2rem;
 }
 
