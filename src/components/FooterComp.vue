@@ -45,7 +45,7 @@
       <div v-for="post in postsList.slice(0, 2)" :key="post.title" class="article">
         <img :src="post.imgUrl" class="article-img">
         <div class="article-data">
-          <h4>{{ post.title.slice(0, 60) }}</h4>
+          <h4><a :href="post.url">{{ post.title.slice(0, 60) }}</a></h4>
           <span> – {{ new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) }}</span>
         </div>
       </div>
@@ -113,12 +113,14 @@ export default {
         {
           title: 'Our main target is to "Developing Yourself as a Leader"',
           imgUrl: require("../assets/blog-article-1.jpeg"),
-          date: "2022-02-19T19:04:50"
+          date: "2022-02-19T19:04:50",
+          url: "#"
         },
         {
           title: "Those Other College Expenses You Aren't Thinking About",
           imgUrl: require("../assets/blog-article-2.jpeg"),
-          date: "2022-02-19T19:04:50"
+          date: "2022-02-19T19:04:50",
+          url: "#"
         }
       ]
     };

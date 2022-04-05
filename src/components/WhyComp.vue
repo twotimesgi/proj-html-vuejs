@@ -98,7 +98,7 @@ h2 {
 }
 
 .card {
-  width: 500px;
+  width: calc(500px - 30px);
   background-color: rgb(255, 255, 255);
   display: flex;
   box-shadow: 1px 2px 15px 5px rgba(0,0,0,0.05);
