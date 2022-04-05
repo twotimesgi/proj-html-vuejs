@@ -105,6 +105,14 @@ h2 {
   padding: 50px 30px;
   position: relative;
   text-align: left;
+  
+  &:hover{
+    background-color: $accentColor;
+
+    .icon{
+      color: white;
+    }
+  }
 
   &::before{
     content: "";
